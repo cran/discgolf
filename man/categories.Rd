@@ -3,10 +3,10 @@
 \name{categories}
 \alias{categories}
 \alias{category}
-\alias{category_create}
 \alias{category_latest_topics}
-\alias{category_new_topics}
 \alias{category_top_topics}
+\alias{category_new_topics}
+\alias{category_create}
 \title{Work with categories}
 \usage{
 categories(url = NULL, key = NULL, user = NULL, ...)
@@ -24,14 +24,16 @@ category_create(category, color, text_color, description = NULL,
   user = NULL, ...)
 }
 \arguments{
-\item{url}{Base url for a Discourse installation. See \code{\link{disc_setup}}}
+\item{url}{Base url for a Discourse installation. See 
+\code{\link{disc_setup}}}
 
-\item{key}{Your api key on the Discourse installation. See \code{\link{disc_setup}}}
+\item{key}{Your api key on the Discourse installation. See 
+\code{\link{disc_setup}}}
 
-\item{user}{Your user name on the Discourse installation. See \code{\link{disc_setup}}}
+\item{user}{Your user name on the Discourse installation. See 
+\code{\link{disc_setup}}}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}},
-\code{\link[httr]{POST}}, \code{\link[httr]{PUT}}, or \code{\link[httr]{DELETE}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{category}{Category name. required}
 
@@ -71,7 +73,6 @@ category_top_topics("packages")
 category_new_topics("packages")
 
 # create a category
-category_create("stuff", "F7941D", "FFFFFF", "My new category")
+category_create("stuff3", "F7941D", "FFFFFF", "My new category")
 }
 }
-
